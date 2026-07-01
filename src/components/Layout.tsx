@@ -7,11 +7,9 @@ export function Layout() {
       <header className="site-header">
         <div className="container">
           <Link to="/" className="brand">
-            <Logo />
-            <span className="brand-text">
-              Experiential Learning
-              <small>UiPath Partner Enablement</small>
-            </span>
+            <Logo height={26} />
+            <span className="brand-divider" aria-hidden="true" />
+            <span className="brand-text">Experiential Learning Platform</span>
           </Link>
           <nav className="nav">
             <NavLink to="/" end>

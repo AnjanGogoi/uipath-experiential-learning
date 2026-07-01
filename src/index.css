@@ -162,28 +162,63 @@ p {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: #fff;
 }
 .brand:hover {
   text-decoration: none;
 }
-.brand-logo {
-  height: 30px;
+
+/* UiPath wordmark logo */
+.uipath-logo {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  color: inherit;
+  padding-top: 0.28em; /* room for the sparkle above the "i" */
+}
+.uipath-word {
+  font-family: var(--font-head);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  font-size: 1em;
+  color: currentColor;
+  white-space: nowrap;
+}
+.uipath-spark {
+  position: absolute;
+  color: currentColor;
+}
+.uipath-spark-lg {
+  width: 0.5em;
+  height: 0.5em;
+  top: -0.16em;
+  left: 0.5em;
+}
+.uipath-spark-sm {
+  width: 0.24em;
+  height: 0.24em;
+  top: 0.02em;
+  left: 0.34em;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.22);
 }
 .brand-text {
   font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1.02rem;
+  font-weight: 600;
+  font-size: 1rem;
   letter-spacing: -0.02em;
+  color: #fff;
 }
-.brand-text small {
-  display: block;
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.72rem;
-  color: var(--uip-mid-grey);
-  letter-spacing: 0;
+@media (max-width: 560px) {
+  .brand-divider,
+  .brand-text {
+    display: none;
+  }
 }
 .nav {
   display: flex;
